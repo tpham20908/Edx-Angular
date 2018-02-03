@@ -10,10 +10,16 @@
 <body>
     <div class="container">
         <h1>AngularFundamentals</h1>
+        <h2>{{"Hello from AngularJS"}}</h2>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script>
         var helloWorldApp = angular.module('helloWorldApp', []);
+        helloWorldApp.controller('firstController', [
+            '$scope', function($scope) {
+                $scope.appName = 'An App Name';
+            }
+        ]);
     </script>
 </body>
 
