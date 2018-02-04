@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Current Date</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+<body ng-controller="myController">
+    <h1>{{title}}</h1>
+    <h2>The Current Date is: {{today}}</h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script>
+        var myApp = angular.module('myApp', []);
+        myApp.constant('currentDate', {today: new Date()})
+        myApp.controller('myController', [
+            '$scope', 'currentDate',
+            function($scope, currentDate) {
+                $scope.title = "Module 1 Homework";
+                $scope.today = currentDate.today;
+            }
+        ])
+    </script>
+</body>
+</html>
