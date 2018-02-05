@@ -13,33 +13,43 @@
         <h2>{{model.title}}</h2>
         <div>
             <label>
-                <input type="radio" name="category" ng-click="changeMainDish('Cheese Pizza')"> Cheese Pizze
+                <input type="radio" name="category" ng-click="changeMainDish('Cheese Pizza', 11.25)"> Cheese Pizze
             </label>
         </div>
         <div>
             <label>
-                <input type="radio" name="category" ng-click="changeMainDish('Pepperoni Pizza')"> Pepperoni Pizza
+                <input type="radio" name="category" ng-click="changeMainDish('Pepperoni Pizza', 10.25)"> Pepperoni Pizza
             </label>
         </div>
         <div>
             <label>
-                <input type="radio" name="category" ng-click="changeMainDish('Margherita Pizza')"> Margherita Pizze
+                <input type="radio" name="category" ng-click="changeMainDish('Margherita Pizza', 10.00)"> Margherita Pizze
             </label>
         </div>
         <div>
             <label>
-                <input type="radio" name="category" ng-click="changeMainDish('BBQ Chicken Pizza')"> BBQ Chicken Pizze
+                <input type="radio" name="category" ng-click="changeMainDish('BBQ Chicken Pizza', 12.50)"> BBQ Chicken Pizze
             </label>
         </div>
         <div>
             <label>
-                <input type="radio" name="category" ng-click="changeMainDish('Combo Pizza')"> Combo Pizze
+                <input type="radio" name="category" ng-click="changeMainDish('Combo Pizza', 13.75)"> Combo Pizze
             </label>
         </div>
 
         <div>
             <h3>Selected Item</h3>
-            <pre>{{model.mainDish}}</pre>
+            <pre>{{model.mainDish.name}}</pre>
+        </div>
+
+        <div>
+            <h3>Special Instruction</h3>
+            <textarea class="form-control" ng-model="model.specialInstructions"></textarea>
+        </div>
+
+        <div>
+            <h3>Order Summary</h3>
+            <pre>{{model.mainDish.name}} {{model.mainDish.price}} - {{model.specialInstructions}}</pre>
         </div>
     </div>
 
