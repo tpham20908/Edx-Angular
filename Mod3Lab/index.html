@@ -12,6 +12,8 @@
         {{character.name}} is a {{character.gender}} {{character.type}}
     </div>
 
+    <select ng-options="character.name for character in people" ng-model="selected"></select>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/menuController.js"></script>
