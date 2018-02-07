@@ -8,7 +8,7 @@
 </head>
 
 <body ng-controller="menuController">
-    <div ng-repeat="character in people">
+    <div class="text-info text-center" ng-repeat="character in people | filter : filterType">
         {{character.name}} is a {{character.gender}} {{character.type}}
     </div>
 

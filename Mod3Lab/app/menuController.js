@@ -8,5 +8,7 @@ app.controller('menuController', [
             {'name': 'Daisy Duck', 'type':'duck', 'gender':'female'},
             {'name': 'Goofy', 'type':'dog?', 'gender':'male'}
         ];
+
+        $scope.filterType = 'duck';
     }
 ]);
